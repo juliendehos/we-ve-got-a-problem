@@ -1,7 +1,7 @@
 let
   channel = fetchTarball {
-    url = "https://github.com/NixOS/nixpkgs/archive/8c7203e.tar.gz";
-    sha256 = "0skf7ra1pbqvfh1lv1rlxld0knvxszciyf30n97925frgwkcqbr4";
+    url = "https://github.com/NixOS/nixpkgs/archive/0b875aa.tar.gz";
+    sha256 = "sha256:1pr56w356s67hnmjjarbzpmv1hwb0rd9nq6rcnxb3dxss5r3i5hr";
   };
 
   pkgs = import channel {};
