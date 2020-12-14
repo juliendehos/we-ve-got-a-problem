@@ -1,3 +1,5 @@
+Fixed
+
 ## Problem
 
 The cmake config for pytorch seems to be broken. 
@@ -74,5 +76,18 @@ See also "/home/jd/depots/github/juliendehos/we-ve-got-a-problem/20201030-nixpkg
 $ find /nix/store/*pytorch* -name "libc10.so"
 /nix/store/3x5pr1irgjhdnkplda0p8sx4c7dw5vx1-python3.8-pytorch-1.6.0-lib/lib/libc10.so
 /nix/store/j8rswbn7m64fzq61ijxqy2k5g0ai6v1g-python3.8-pytorch-1.6.0/lib/python3.8/site-packages/torch/lib/libc10.so
+```
+
+## Solution
+
+issue: <https://github.com/NixOS/nixpkgs/issues/102146>
+
+pull request: <https://github.com/NixOS/nixpkgs/pull/105772>
+
+```
+$ nix-shell default-fixed.nix
+$ cmake -S . -B build
+$ cmake --build build
+$ ./build/myapp
 ```
 
